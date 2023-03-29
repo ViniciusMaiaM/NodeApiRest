@@ -1,4 +1,4 @@
-import { server } from './server/Server';
+import { server } from './Server';
 
 // Caso a porta localizada no env seja undefined a porta utilizada será a 3333
 server.listen(process.env.PORT || 3333, () =>{
