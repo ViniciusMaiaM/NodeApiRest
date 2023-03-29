@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
+// Importação de todos os controllers salvos no controllers index
+import { CitiesController } from '../controllers';
 
 const router = Router();
 
@@ -8,9 +10,7 @@ router.get('/', (req, res) => {
   return res.send('Olá, DEV!');
 });
 
-router.post('/test', (req, res) => {
-
-  return res.status(StatusCodes.ACCEPTED).json(req.body);
-});
+// Já que todas as rotas do controller foram importadas, as aplicações podem ser simplifcadas desta maneira
+router.post('/cities', CitiesController.createCityController);
 
 export { router };
