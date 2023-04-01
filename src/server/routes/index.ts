@@ -13,8 +13,7 @@ router.get('/', (req, res) => {
 // Já que todas as rotas do controller foram importadas, as aplicações podem ser simplifcadas desta maneira
 router.post(
   '/cities', 
-  CitiesController.createBodyValidator,
-  CitiesController.createQueryValidator,
+  CitiesController.createValidation,
   CitiesController.createCityController
 );
 
